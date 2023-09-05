@@ -38,3 +38,16 @@ while True:
     attempt += 1
 
 print("User guessed the number in", attempt+1, "attempts")
+
+"""
+Output:
+
+Guess the number: 5
+Low
+Guess the number: 8
+High
+Guess the number: 7
+Congratulations! You guessed the number correctly.
+User guessed the number in 3 attempts
+
+"""

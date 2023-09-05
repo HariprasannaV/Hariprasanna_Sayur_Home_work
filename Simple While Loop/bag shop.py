@@ -47,3 +47,14 @@ while totalSales < 10000 and totalBagsSold < 10:
 
 print("Total sales:", totalSales)
 print("Total number of bags sold:", totalBagsSold)
+
+
+"""
+Output:
+Enter the bag color (red or white): RED
+Enter the quantity of bags: 5
+Enter the bag color (red or white): WHITE
+Enter the quantity of bags: 15
+Total sales: 27500
+Total number of bags sold: 20
+"""
