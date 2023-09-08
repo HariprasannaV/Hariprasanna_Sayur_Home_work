@@ -5,8 +5,10 @@
 #If the users presses any other key, stop printing. Maximum 10 lines
 """
 num = int(input("Enter the number: "))  # Getting the user to enter an integer.
+i = -num  # Initialize the loop variable
 
-for i in range(-num, num):  # Looping through a range of values
+#for i in range(-num, num):# Looping through a range of values
+while i < num:   # Use a while loop
     if i <= 0:
         l = -i
     else:
@@ -19,7 +21,8 @@ for i in range(-num, num):  # Looping through a range of values
     nxt_line = input()  # Wait for user input "Space" key
 
     if nxt_line != " ":
-        break;  # Exit the loop
+        break  # Exit the loop
+    i += 1  # Increment the loop variable
 
 """
 Output:
