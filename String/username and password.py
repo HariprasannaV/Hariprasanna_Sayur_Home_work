@@ -21,11 +21,11 @@ if '@' in username and (username.endswith('.com') or username.endswith('.edu') o
 
     # Extract the company name from the username
     company_name = username.split('@')[1].split('.')[0][0:3]
-    print(company_name)
+    #print(company_name)
 
     # Construct the expected password
     expected_password = first_letter + third_letter + last_three + company_name + '123'
-    print(expected_password)
+    #print(expected_password)
 
     # Check if the entered password matches the expected password
     if password == expected_password:
@@ -34,3 +34,11 @@ if '@' in username and (username.endswith('.com') or username.endswith('.edu') o
         print("Username and/or password are incorrect.")
 else:
     print("Invalid username format.")
+
+"""
+output:
+Enter your username: myname@sayur.com
+Enter your password: mnamesay123
+
+Username and password are correct.
+"""
