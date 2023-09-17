@@ -62,3 +62,11 @@ for times in range(3):
     else:
         print("Please try another time")
         print(f'you have only {2 - times} chances remaining')  # Calculate and display remaining chances
+
+"""
+Output:
+Enter the New Password: hariprasanna2003*@
+print at least 3 alphabets , 2 numbers , 2 special characters
+ok
+
+"""
