@@ -1,6 +1,6 @@
 # Define the menu items and their prices
 menu_card = ["tea", "vadai", "coffee", "biscuit"]
-price = ["15", "5", "12", "10"]
+price = ["20", "5", "20", "10"]
 
 # Display the menu to the user
 print("Here are the menu items and their prices:")
@@ -25,7 +25,7 @@ while True:
         myOrders_array.append(user_input)
 
 # Print the user's order
-print("Your order:")
+# print("Your order:")
 for index, order in enumerate(myOrders_array):
     user_input_2 = input(f'How many {myOrders_array[index]} do you want: ')
     count_array.append(int(user_input_2))
@@ -57,3 +57,26 @@ for i in range(len(myOrders_array)):
 
 # Print the total bill amount
 print("Total bill amount:", total_price_amount)
+
+"""
+output:
+
+Here are the menu items and their prices:
+1. tea = 20
+2. vadai = 5
+3. coffee = 20
+4. biscuit = 10
+Enter your order (or 'enough' to close the menu): tea
+Enter your order (or 'enough' to close the menu): biscuit
+Enter your order (or 'enough' to close the menu): coffee
+Enter your order (or 'enough' to close the menu): enough
+How many tea do you want: 5
+How many biscuit do you want: 5
+How many coffee do you want: 5
+You ordered:
+tea x5
+biscuit x5
+coffee x5
+Total bill amount: 250
+
+"""
