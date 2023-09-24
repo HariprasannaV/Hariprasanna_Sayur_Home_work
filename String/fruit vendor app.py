@@ -17,24 +17,36 @@ fruits = ['apple', 'orange', 'banana']
 # Regular expression pattern to match fruit and quantity
 pattern = r'(\d*)\s*(' + '|'.join(fruits) + ')'
 
-
 # Simulate a customer request
-request = input("what do you need: ")
-match = re.search(pattern, request, re.IGNORECASE)
-print( match.group(2))
-print(match.group(0))
+request = input("What do you need: ")
 
-if match:
-    fruit = match.group(2).lower()
-    quantity = match.group(1)
+# Use regular expression to find all matches in the request
+matches = re.findall(pattern, request, re.IGNORECASE)
 
-    if quantity:
-        print(f"You want {quantity} {fruit}(s).")
+# Print all the matches found in the request
+print(matches)
+
+# Loop through each match found
+for i in range(len(matches)):
+
+    # Check if any matches were found
+    if matches:
+
+        # Extract the fruit name and quantity from the current match
+        fruit = matches[i][1]
+        quantity = matches[i][0]
+
+        # Check if a quantity was provided in the request
+        if quantity:
+            print(f"You want {quantity} {fruit}.")
+        else:
+            # If no quantity was provided, ask the user for it
+            quantity = input(f"How many {fruit} do you want? ")
+            print(f"You want {quantity} {fruit}.")
+
     else:
-        quantity = input(f"How many {fruit}(s) do you want? ")
-        print(f"You want {quantity} {fruit}(s).")
-else:
-    print("Sorry, I didn't understand that. Please specify the fruit and quantity.")
+        # If no matches were found, inform the user
+        print("Sorry, I didn't understand that. Please specify the fruit and quantity.")
 
 """
 Output:
