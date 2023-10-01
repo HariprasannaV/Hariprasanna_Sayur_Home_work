@@ -10,6 +10,8 @@
 username = input("Enter your username: ")
 password = input("Enter your password: ")
 
+numbers = [0,1,2,3,4,5,6,7,8,9]
+
 # Check if the username and password are correct
 if '@' in username and (username.endswith('.com') or username.endswith('.edu') or username.endswith('.tech') or username.endswith('.org')):
     # Extract the first, third, and last 3 letters of the username
@@ -20,12 +22,12 @@ if '@' in username and (username.endswith('.com') or username.endswith('.edu') o
     last_three = word[-3:]
 
     # Extract the company name from the username
-    company_name = username.split('@')[1].split('.')[0][0:3]
-    #print(company_name)
+    company_name = username.split('@')[1].split('.')[0][:3]
+    # print(company_name)
 
     # Construct the expected password
-    expected_password = first_letter + third_letter + last_three + company_name + '123'
-    #print(expected_password)
+    expected_password = first_letter + third_letter + last_three + company_name + "123"
+    # print(expected_password)
 
     # Check if the entered password matches the expected password
     if password == expected_password:
@@ -41,4 +43,15 @@ Enter your username: myname@sayur.com
 Enter your password: mnamesay123
 
 Username and password are correct.
+"""
+
+"""
+# Get user input as a string
+user_input = input("Enter a number: ")
+
+# Check if the input is a three-digit number
+if user_input.isdigit() and len(user_input) == 3:
+    print(f"The input {user_input} is a three-digit number.")
+else:
+    print(f"The input {user_input} is not a three-digit number.")
 """

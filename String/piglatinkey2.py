@@ -34,7 +34,7 @@ for word in inputSentence.split():  # Splitting the sentence into words
     # Find the index of the first vowel in the word
     for index, char in enumerate(word):
         if char.lower() in vowels:
-            first_vowel_index = index
+            first_vowel_index = index+1
             break
 
     if first_vowel_index > 0:
@@ -46,9 +46,9 @@ for word in inputSentence.split():  # Splitting the sentence into words
 
 """
 Output:
-Enter the sentence: I am python
-Iay
-amay
-onpythay
+Enter the sentence: i am python
+iay
+maay
+npythoay
 
 """

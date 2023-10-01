@@ -17,7 +17,7 @@ for times in range(3):
     print("print at least 3 alphabets , 2 numbers , 2 special characters")
 
 # Initialize counts for different character types
-    capital_count = 0
+
     small_count = 0
     digit_count = 0
     special_count = 0
@@ -38,7 +38,7 @@ for times in range(3):
         continue  # Continue to the next iteration
 
     # Check for weak passwords with exactly one character type
-    elif small_count == 1 or digit_count == 1 or special_count <= 1:
+    elif small_count <= 1 or digit_count <= 1 or special_count <= 1:
         print('weak')
         print('please try again')
         continue  # Continue to the next iteration

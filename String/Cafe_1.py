@@ -1,4 +1,4 @@
-# Define the menu items and their prices
+# The menu items and their prices
 menu_card = ["tea", "vadai", "coffee", "biscuit"]
 price = ["20", "5", "20", "10"]
 
@@ -39,15 +39,17 @@ total_price_amount = 0
 # Calculate the total bill
 # Loop through the items in the user's order
 for i in range(len(myOrders_array)):
-    # Get the current item and its quantity from the lists
+    # Getting the current item and its quantity from the lists
     item = myOrders_array[i]
     quantity = count_array[i]
 
-    # Find the index of the item in the menu to look up its price
+    # Finding the index of the item in the menu to look up its price
     item_index = menu_card.index(item)
+    print(item_index)
 
-    # Get the price of the item from the price list and convert it to an integer
+    # Getting the price of the item from the price list and convert it to an integer
     item_price = int(price[item_index])
+    print(item_price)
 
     # Calculate the cost of the current item by multiplying its price by the quantity
     item_cost = item_price * quantity
@@ -80,3 +82,4 @@ coffee x5
 Total bill amount: 250
 
 """
+

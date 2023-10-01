@@ -13,8 +13,8 @@ s = input("Enter the encrypted form here : ")
 # Initialize an empty string
 decrypted = ''
 # Find all matches of the pattern in the string
-matches = re.findall(r'([a-z]+)(\d+)', s)
-# print(matches)
+matches = re.findall(r'([a-zA-Z]+)(\d+)', s)
+print(matches)
 
 for match in matches:
     # repeat the characters by the number of times and add to the decrypted string
@@ -23,7 +23,7 @@ for match in matches:
     decrypted += match[0] * int(match[1])
 
 print('Decrypted word:', decrypted)  # Print the decrypted word
-print('Length:', len(decrypted)) # Print the length of the decrypted word
+print('Length:', len(decrypted))  # Print the length of the decrypted word
 
 """
 Output:
