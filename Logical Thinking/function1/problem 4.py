@@ -11,22 +11,20 @@ dishes = []
 
 def buy_ingredients():
     ingredients = ['fruits', 'vegetables', 'milk', 'bread', 'meat', 'rice', 'white sugar', 'brown sugar', 'butter',
-                   'egg', 'salt', 'pasta', 'baking powder', 'honey', 'vinegar']
+                   'egg', 'salt', 'pasta', 'baking powder', 'honey', 'vinegar', 'chicken', 'mutton']  # ingredients list
     print("Necessary Ingredients were bought including", end=" ")
     for i in ingredients:
         print(i, end=", ")
     print("and other\n")
-    return ingredients
 
 
 def cut_vegetables():
     print("Cut Vegetables : ", end="")
     cut_vegetables_list = ['Carrot', 'Raddish', 'Beetroot', 'Onion', 'Potato', 'Tomato', 'Brinjal', 'Drumstick',
-                      'Ladies Finger']
+                           'Ladies Finger']
     for i in cut_vegetables_list:
         print(i, end=" ")
     print('\n')
-    return cut_vegetables_list
 
 
 def cook_vegetables():
@@ -36,7 +34,6 @@ def cook_vegetables():
         print(i, end=" ")
         dishes.append(i)
     print("\n")
-    return cooked_dishes
 
 
 def cook_meat(x):
@@ -44,7 +41,6 @@ def cook_meat(x):
     print(f"Cooking {cooked_meat}")
     print(f"{cooked_meat} Ready ! \n")
     dishes.append(x)
-    return cooked_meat
 
 
 def make_salad():
@@ -52,7 +48,6 @@ def make_salad():
     salad = 'Fruit Salad'
     print(f'{salad} Ready !')
     dishes.append(salad)
-    return salad
 
 
 def all_dishes():
