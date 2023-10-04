@@ -5,11 +5,14 @@ dice.If the rolled number is 0, game ends. If the rolled number is even, then 2 
  If the number is 5, then 3 points are added. The game ends when the user has 50 points.
 """
 
+
 # Import the 'random' module for generating random numbers
 def random():
     import random
-    random_no = random.randint(0, 6)  # Generate a random number between 0 and 6
+    # Generate a random number between 0 and 6(randint is used to generate random number)
+    random_no = random.randint(0, 6)
     return random_no
+
 
 # Initialize the player's point
 point = 0
