@@ -33,7 +33,7 @@ def findingAandBandC():  # Define a function named findingAandBandC
 # Define a list of letters to search for in the sentence
 letter = ["a", "b", "c"]
 
-# Prompt the user to enter a sentence and convert it to lowercase
+# enter a sentence and convert it to lowercase
 sentence = str(input("Enter the statement: ")).lower()
 
 # Call the function to find occurrences of 'a', 'b', and 'c' in the sentence

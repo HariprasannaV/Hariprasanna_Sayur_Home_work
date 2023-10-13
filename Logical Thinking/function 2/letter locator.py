@@ -18,26 +18,26 @@ def findLetter():
     for n in letter:
 
         # Find the index of the first occurrence of the letter 'n' in the sentence
-        first_letter = sentence.find(n)
-        # print(f'{n} {first_letter}')
+        first_letter_index = sentence.find(n)
+        # print(f'{n} {first_letter_index}')
 
         # Check if the letter 'n' was found in the sentence
-        if first_letter >= 0:
+        if first_letter_index >= 0:
             # Find the index of the last occurrence of the letter 'n' in the sentence
-            last_letter = sentence.rfind(n)
+            last_letter_index = sentence.rfind(n)
 
             # Check if there is only one occurrence of the letter 'n'
-            if last_letter == first_letter:
+            if last_letter_index == first_letter_index:
                 print(f"There is only one {n}")
 
                 # Update the sentence to start from the next character after the first occurrence
-                sentence = sentence[first_letter + 1:]
+                sentence = sentence[first_letter_index + 1:]
 
                 # Continue to the next letter in the list
                 continue
             else:
                 # Print the substring of the sentence between the first and last occurrence of 'n'
-                print(sentence[first_letter + 1:last_letter])
+                print(sentence[first_letter_index + 1:last_letter_index])
 
                 # Exit the loop once the first occurrence is found
                 break
