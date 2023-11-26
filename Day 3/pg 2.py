@@ -14,9 +14,6 @@ try:
     # Open the file in read mode
     file = open("story", "r")
 
-    # List to store words from each line
-    word_list = []
-
     # Iterate through each line in the file
     for line in file:
         print(line)
@@ -24,20 +21,17 @@ try:
         # Use regular expression to find words, convert to lowercase
         words = re.findall(r'\b\w+\b', line.lower())
 
-        # Add the words to the word_list
-        word_list.extend(words)
-
     # Initialize count for occurrences
     count = 0
 
     # Iterate through the list of words
-    for i in range(len(word_list)):
-        if word_list[i] == "the":
+    for i in range(len(words)):
+        if words[i] == "the":
             # Iterate from the next word to find occurrences until "a" is encountered
-            for j in range(i + 1, len(word_list)):
-                if word_list[j] == "a":
+            for j in range(i + 1, len(words)):
+                if words[j] == "a":
                     break
-                elif word_list[j] == "the":
+                elif words[j] == "the":
                     count += 1
                     break
 
