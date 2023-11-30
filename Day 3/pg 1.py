@@ -34,6 +34,7 @@ for i in range(row):
     for j in range(i + 1):
         # Use the binomial coefficient formula to calculate the value
         coefficient = int(factorial(i) / (factorial(i - j) * factorial(j)))
+
         print(coefficient, end=" ")
 
     # Move to the next line after printing each row

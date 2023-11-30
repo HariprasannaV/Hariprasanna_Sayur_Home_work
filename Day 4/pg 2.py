@@ -27,6 +27,8 @@ try:
             i_th_row.append("*")
         board.append(i_th_row)
 
+    # print(board)
+
     # Function to print the current state of the board
     def printing_board(li):
         for i in li:
@@ -42,7 +44,7 @@ try:
     a_points = 0
     b_points = 0
 
-    # Main game loop
+    # main game loop
     while True:
         # Check if either player has reached the maximum points
         if (a_points >= max_points) or (b_points >= max_points):
@@ -58,18 +60,19 @@ try:
         # Player A's turn
         print("Player A Turn")
 
-        # Simulate rolling a die for row and column selection
-        die_rolling = input("Please Enter to Roll The Die : ")
+        # rolling a die for row and column selection
+        die_rolling = input("Press Enter to Roll The Die : ")
         row_a = random.randint(1, rows)
         print(row_a)
 
-        die_rolling2 = input("Please Enter to Roll The Die : ")
+        die_rolling2 = input("Press Enter to Roll The Die : ")
         col_a = random.randint(1, columns)
         print(col_a)
 
         # Check the selected cell on the board and update points accordingly
         if board[(row_a - 1)][col_a - 1] != "B":
             board[(row_a - 1)][col_a - 1] = "A"
+
         elif board[(row_a - 1)][col_a - 1] == "B":
             board[(row_a - 1)][col_a - 1] = "A"
             a_points += 1
@@ -80,18 +83,19 @@ try:
         # Player B's turn
         print("Player B Turn")
 
-        # Simulate rolling a die for row and column selection for Player B
-        die_rolling3 = input("Please Enter to Roll The Die : ")
+        # rolling a die for row and column selection for Player B
+        die_rolling3 = input("Press Enter to Roll The Die : ")
         row_b = random.randint(1, rows)
         print(row_b)
 
-        die_rolling4 = input("Please Enter to Roll The Die : ")
+        die_rolling4 = input("Press Enter to Roll The Die : ")
         col_b = random.randint(1, columns)
         print(col_b)
 
         # Check the selected cell on the board and update points accordingly for Player B
         if board[(row_b - 1)][col_b - 1] != "A":
             board[(row_b - 1)][col_b - 1] = "B"
+
         elif board[(row_b - 1)][col_b - 1] == "A":
             board[(row_b - 1)][col_b - 1] = "B"
             b_points += 1

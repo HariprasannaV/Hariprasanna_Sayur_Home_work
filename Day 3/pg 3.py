@@ -5,46 +5,52 @@ for each word. Write this information at the end of file under the heading "Summ
 
 """
 
-# Import the regular expression module
-# Import the regular expression module
-import re
+try:
 
-# Open the file in read mode
-file = open("story 2", "r")
+    # Import the regular expression
+    import re
 
-word_list = []
+    # Open the file in read mode
+    file = open("story 2", "r")
 
-# Iterate through each line in the file
-for line in file:
-    print(line)
+    word_list = []
 
-    # Use regular expression to find words, convert to lowercase
-    words = re.findall(r'\b\w+\b', line.lower())
-    word_list.extend(words)
+    # Iterate through each line in the file
+    for line in file:
+        print(line)
 
-print(word_list)
+        # Use regular expression to find words, convert to lowercase
+        words = re.findall(r'\b\w+\b', line.lower())
+        word_list.extend(words)
 
-four_letter_word = []
+    print(word_list)
 
-for word in word_list:
-    if len(word) == 4:
-        four_letter_word.append(word)
+    four_letter_word = []
 
-print(four_letter_word)
+    for word in word_list:
+        if len(word) == 4:
+            four_letter_word.append(word)
 
-Empty_dict = {}
+    print(four_letter_word)
 
-for word in four_letter_word:
-    if word not in Empty_dict:
-        Empty_dict[word] = 1
+    Empty_dict = {}
 
-    else:
-        Empty_dict[word] += 1
+    for word in four_letter_word:
+        if word not in Empty_dict:
+            Empty_dict[word] = 1
 
-# print(Empty_dict)
+        else:
+            Empty_dict[word] += 1
 
-file= open("story 2", "a")
+    # print(Empty_dict)
 
-file.write("\nSummary of 4 letter words\n")
-for i, j in Empty_dict.items():
-    file.write(f"The word {i} occurred {j} times\n")
+    file = open("story 2", "a")
+
+    file.write("\nSummary of 4 letter words\n")
+    for i, j in Empty_dict.items():
+        file.write(f"The word {i} occurred {j} times\n")
+        print(f"The word {i} occurred {j} times\n")
+
+
+except Exception as e:
+    print(f'Error: {e}')
