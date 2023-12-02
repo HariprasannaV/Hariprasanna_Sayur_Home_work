@@ -31,4 +31,4 @@ third_class_profit = calculate_profit(third_class_price, third_class_tickets, 0,
 
 # Calculate and display the total profit
 total_profit = first_class_profit + second_class_profit + third_class_profit
-print(f"The total profit for the railways is: Rs. {total_profit}")
+print(f"The total profit for the railways is: Rs. {total_profit}/-")
